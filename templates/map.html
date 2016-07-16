@@ -1,0 +1,125 @@
+<!-- 
+this is the client side and visual display
+Uses javascript file to handle events
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--link rel="stylesheet" type="text/css" href="style.css" media="screen" /-->
+​
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>Travel Buddy</title>
+​
+    <style type="text/css">
+      html, body
+      {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body
+      {
+        background: -webkit-linear-gradient(left, #1e5799 0%,#ffffff 27%); /* Chrome10-25,Safari5.1-6 */
+      }
+      #map
+      {
+        
+        padding: 400px;
+        margin-top: 30px;
+        float: none;
+      }
+      #yelpwidget
+      {
+        padding: 100px;
+        float: none;
+      }
+      #checkbox
+      {
+        font-size: 22px;
+        margin-left: 30px;
+        margin-top: 30px;
+        display: block;
+      }
+​
+      header
+      {
+        font-size: 50px;
+        color: #0000A0;
+        font-weight: bolder;
+        font-style: normal;
+        font: georgia;
+      }
+      input
+      {
+        size: 30;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-left: 30px;
+        margin-top: 30px;
+        padding: 10px;
+        display: block;
+        margin-left: 60;
+        width: 220px;
+      }
+      button
+      {
+        height: 50px;
+        font-size: 30px;
+        font: georgia;
+        width: 220px;
+        display: block;
+        margin-left: 30px;
+        margin-top: 30px;
+        background: #2b6185;
+        background: -webkit-gradient(linear, left top, left bottom, from(#76b4de), to(#2b6185));
+        background: -webkit-linear-gradient(top, #76b4de, #2b6185);
+        background: -moz-linear-gradient(top, #76b4de, #2b6185);
+        background: -ms-linear-gradient(top, #76b4de, #2b6185);
+        background: -o-linear-gradient(top, #76b4de, #2b6185);
+        background-image: -ms-linear-gradient(top, #76b4de 0%, #2b6185 100%);
+        border-radius: 30px;
+        -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+        -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+        box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+        text-shadow: #7ea4bd 0 1px 0;
+        color: #06416c;
+        vertical-align: middle;
+      }
+      label
+      {
+        vertical-align: middle;
+      }
+      .checkbox input
+      {
+        vertical-align: middle;
+      }
+      .checkbox label span{
+        vertical-align: middle;
+      }
+​
+    </style>
+  </head>
+  <body>
+    <div style="width: 100%; display: table;">
+        <header><center>&#9992   TRAVEL BUDDY    &#9992<br></center>
+        </header>
+    </div>
+    <div style="display: table-row">
+      <input type="text" id="locality" placeholder="Enter a location...">
+      <input type="text" id="region" placeholder="Enter a region...">
+      <input type="text" id="postal_code" placeholder="Enter a postal code...">
+      <label id="checkbox"><input id="check_box_value" type="checkbox" name="checkbox" value="value"> Use Current Location</label>
+      <button id="search">Search</button>
+      <div style="width: 400px; display: table-cell;"> </div>
+      <div id="map" style="display:table-cell; margin-top: 30px"></div>
+      <div id='yelpwidget' style="width: 100%; display: table-cell"></div>
+    </div>
+​
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ3OgV-uc9YSiSb6WjV259v67FXVwL2z4">
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+Instructions for installing components needed to compile and run the project
+
+	Install Python 3: https://www.python.org/downloads/
+	Install the client library - you either use a package manager or download and install the python client library manually
+	Managed Installation:
+	Use pip or setuptools to manage your installation (note: you might need to run sudo first)
+	Using Pip (preferred):
+		$ pip install --upgrade google-api-python-client
+	Using setuptools: 
+		$ easy_install --upgrade google-api-python-client
+	Manual Installation:
+		Download the latest client library for Python here: https://pypi.python.org/pypi/google-api-python-client/ 
+		Unpack the code
+	Run: python setup.py install
+	Install Rauth:
+		$ pip install rauth
+	Install Flask: 
+		$ pip install flask
+
+Instructions for compiling and running the project
+
+	- Open terminal/command prompt and navigate to appropriate directory
+	- Start python server using command: python dataComFinal.py
+
+Instructions for using the software
+
+	- Open terminal/command prompt and navigate to appropriate directory
+	- Start python server using command python dataComFinal.py
+	- Then open a web browser and enter http://127.0.0.1:5000/ because our program is set to run on the local host. It can act as a server and be accessed by other clients but we had 		issues with the Chapman firewall
+	- Once entered you will see our home screen pop up and you can search for your desired location using your current location or a custom search
+	- Then once the map is populated you will be able to select business or restaurants and view their Yelp reviews on the side of the page
+
